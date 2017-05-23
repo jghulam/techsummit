@@ -1,0 +1,45 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Cluster IP",
+		"_postman_id": "f3ffd77a-18d7-42f2-101b-bceace597278",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT Ext Data Services IP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "nutanix/4u",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/cluster/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"NUC_CVE\",\r\n  \"cluster_external_data_services_ipaddress\": \"10.68.69.45\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
