@@ -1,0 +1,56 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Challange",
+		"_postman_id": "5acf5687-a110-74f9-a290-957159a586da",
+		"description": "Gather Task and Health Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://10.68.69.102:9440/api/nutanix/v2.0/vms/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "nutanix/4u",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://10.68.69.102:9440/api/nutanix/v0.8/tasks/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
