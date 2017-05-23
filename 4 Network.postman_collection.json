@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "4 Network",
+		"_postman_id": "ad3241d7-cc67-2695-c40d-f56a60a11d89",
+		"description": "Create Network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Networks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "nutanix/4u",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://10.68.69.102:9440/api/nutanix/v2.0/networks/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get a list of Containers"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Networks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "nutanix/4u",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/cluster/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"New Network\",\r\n\"vlan_id\":0\r\n}"
+				},
+				"description": "Create New Network"
+			},
+			"response": []
+		}
+	]
+}
