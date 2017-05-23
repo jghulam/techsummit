@@ -1,0 +1,37 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Challenge",
+		"_postman_id": "ddb94efc-34cc-9c37-6eca-47d91d2a7bc6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/clusters/?projection=HEALTH",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "nutanix/4u",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://10.68.69.102:9440/PrismGateway/services/rest/v2.0/clusters/?projection=HEALTH",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bnV0YW5peC80dQ==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
